@@ -1,10 +1,10 @@
 export default function iterateThroughObject(reportWithIterator) {
-  let output = '';
-  for (const [index, item] of Object.entries(reportWithIterator)) {
-    output += `${item}`;
-    if (parseInt(index) !== reportWithIterator.length - 1) {
-        output += ' | ';
-      }
-    }
-  return output;
+  let n = reportWithIterator.next();
+  let res = '';
+
+  while (!n.done) {
+    res += `${n.value} | `;
+    n = reportWithIterator.next();
+  }
+  return res.slice(0, res.length - 3);
 }
