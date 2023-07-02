@@ -6,7 +6,7 @@ export default class Airport{
 
     }
 
-    get name {
+    get name() {
         return this._name;
     }
 
@@ -14,7 +14,7 @@ export default class Airport{
         this._name = value;
     }
 
-    get code {
+    get code() {
         return this._code;
     }
 
