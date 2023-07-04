@@ -1,3 +1,3 @@
-export default function setFromArray(arr) {
-  return new setFromArray(arr);
-}
+export default function setFromArray(list) {
+    return new Set(list);
+  }
